@@ -9,6 +9,14 @@
 
   <h1>THE TITLE OF YOUR WEBPAGE</h1>
   <div id="container"></div>
+  <button onclick="alert('Hello World')">Click Me</button>
+<!-- the HTML file -->
+<button id="btn">Click Me</button>
+<!-- the HTML file -->
+<!-- METHOD 1 -->
+<button onclick="alertFunction()">CLICK ME BABY</button>
+
+
 <script type="text/javascript">
   const container = document.querySelector("#container");
   const content = document.createElement("div");
@@ -33,6 +41,26 @@
   container.appendChild(redP);
   container.insertBefore(blueH3, redP);
   container.appendChild(newDiv);
+
+  // the JavaScript file
+const btn = document.querySelector("#btn");
+btn.onclick = () => alert("Hello World");
+
+function alertFunction() {
+  alert("YAY! YOU DID IT!");
+}
+
+btn.addEventListener("click", function (e) {
+  console.log(e);
+});
+btn.addEventListener("click", function (e) {
+  console.log(e.target);
+});
+btn.addEventListener("click", function (e) {
+  e.target.style.background = "blue";
+});
+
+
 </script>
 </body>
 </html>
