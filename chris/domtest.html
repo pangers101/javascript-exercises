@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Test</title>
+</head>
+<body>
+
+  <h1>THE TITLE OF YOUR WEBPAGE</h1>
+  <div id="container"></div>
+<script type="text/javascript">
+  const container = document.querySelector("#container");
+  const content = document.createElement("div");
+
+  const redP = document.createElement("p");
+  redP.style.color = 'red';
+  redP.textContent = 'Hey I\'m red!';
+
+  const blueH3 = document.createElement("h3");
+  blueH3.style.color = 'blue';
+  blueH3.textContent = "I'm a Blue H3!";
+
+  const newDiv = document.createElement("div");
+  newDiv.innerHTML = '<h1>I\'m in a DIV!</h1><p>Me TOO!</p>';
+  newDiv.style.borderColor = 'black';
+  newDiv.style.backgroundColor = 'pink';
+
+  content.classList.add("content");
+  content.textContent = "This is the glorious text-content!";
+
+  container.appendChild(content);
+  container.appendChild(redP);
+  container.insertBefore(blueH3, redP);
+  container.appendChild(newDiv);
+</script>
+</body>
+</html>
